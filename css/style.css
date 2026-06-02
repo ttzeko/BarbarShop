@@ -1,0 +1,60 @@
+body {
+    background: radial-gradient(circle, #504B44 0%, #373737 100%);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.menubar-top {
+    font-family: 'DM Sans', sans-serif !important;
+    font-weight: 500;
+    font-size: 1.1rem; 
+    letter-spacing: 0.5px; 
+    cursor: pointer; 
+    color: #f2e6ce;
+}
+
+.menubar-top a {
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.25s ease-in-out, color 0.25s ease-in-out;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.menubar-top a:hover {
+    border-color: #efe5d2;
+    color: #efe5d2;
+}
+
+.menubar-top a.active {
+    border-color: #f2e6ce;
+    color: #f2e6ce;
+}
+
+.title-main {
+    font-family: 'Manufacturing Consent', sans-serif !important;
+    font-weight: 500;
+    font-size: 10rem; 
+    letter-spacing: 0.5px; 
+    cursor: pointer; 
+    color: #efe5d2;
+    text-shadow: #373737 6px 5px 0px;
+    display: inline-block;
+}
+
+.glass-header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 20px 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: auto;
+    margin: 0 auto;
+}
+
+a {
+    color: #f2e6ce;
+    text-decoration: none;
+}
