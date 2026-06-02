@@ -49,11 +49,28 @@ body {
     border-radius: 12px;
     padding: 20px 40px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    width: auto;
+    width: fit-content;
     margin: 0 auto;
 }
 
 a {
     color: #f2e6ce;
     text-decoration: none;
+}
+
+.primary-card-text {
+
+    font-family: 'DM Sans', sans-serif !important;
+    color:#efe5d2;
+    display: block;
+    width: fit-content;
+}
+
+.div-primary {
+
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    
+
 }
