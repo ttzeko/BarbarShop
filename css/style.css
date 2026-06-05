@@ -58,7 +58,7 @@ body {
     border-radius: 12px;
     padding: 20px 40px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
+    width: auto;
     margin: 0 auto;
 }
 
@@ -102,7 +102,18 @@ a {
     letter-spacing: 1px; 
     cursor: pointer; 
     color: #f2e6ce;
-    border: #efe5d2 2px solid;
-    border-radius: 4px;
+    max-height: 3.5rem;
+    color: #373737;
+    background-color: #e2d4bb;
+    padding: 0px aut;
     text-align: center;
+}
+
+.reserveButtonPrimary:hover {
+
+    outline: #efe5d2 2px solid;
+    color: #e2d4bb;
+    background-color: #373737;
+    transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
 }
