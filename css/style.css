@@ -50,9 +50,9 @@ body {
 
 .title-main {
     font-family: 'Manufacturing Consent', sans-serif !important;
+    font-variant: small-caps;
     font-weight: 500;
     font-size: clamp(4rem, 10vw, 20rem);
-    letter-spacing: 0.5px; 
     cursor: pointer; 
     color: #efe5d2;
     text-shadow: #373737 4px 6px 3px;
@@ -152,6 +152,7 @@ a {
     display: block;
     width: fit-content;
     font-size: clamp(1rem, 2vw, 3rem);
+    
 }
 .secondary-card-text {
 
@@ -164,11 +165,9 @@ a {
 }
 
 .div-primary {
-
     display: flex;
-    flex-direction: row;
     width:100%;
-    
+    margin-top: 2rem;
 
 }
 
@@ -184,7 +183,8 @@ a {
     background-color: #e2d4bb;
     padding: 20px 40px;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
+    margin-bottom: 1rem;
     border-radius: 8px;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -202,15 +202,16 @@ a {
 }
 
 @view-transition {
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    navigation: auto;
 }
 
-@view-transition-old(root) {
-    opacity: 0;
-    transform: translateY(-12px) scale(0.98);
+p {
+    text-spacing: 1px;
+    letter-spacing: 1px;
 }
 
-@view-transition-new(root) {
-    opacity: 0;
-    transform: translateY(12px) scale(0.98);
+.image-round
+{
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
