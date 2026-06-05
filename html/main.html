@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Manufacturing+Consent&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,10 +19,21 @@
 </head>
 
 <body>
-    <div class="d-flex flex-row menubar-top col-12 gap-5 py-5 justify-content-center">
-        <a class="btn btn-dark" href="reserve.html">Foglalás</a>
-        <a class="btn btn-dark" href="main.html">Főoldal</a>
-        <a class="btn btn-dark" href="about.html">Rólunk</a>
+    <div class="flex-row d-inline-flex menubar-top col-12 gap-5 py-5 mx-4">
+        <div class="dropdown">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="mainDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu">
+                <span class="dropdown-icon" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <ul class="dropdown-menu menubar-top" aria-labelledby="mainDropdown">
+                <li><a class="dropdown-item" href="main.html">Főoldal</a></li>
+                <li><a class="dropdown-item" href="reserve.html">Foglalás</a></li>
+                <li><a class="dropdown-item" href="about.html">Rólunk</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="container-fluid">
@@ -32,7 +42,7 @@
         </div>
     </div>
 
-    <div class="d-block-flex flex-row glass-header div-primary container-fluid mx-auto my-3">
+    <div class="d-block-flex flex-row glass-header div-primary container-fluid mx-auto my-5">
         <div>
             <img src="https://images.fresha.com/locations/location-profile-images/1105995/5534173/525d1440-a595-4e98-a67c-7d25943f396e-SirBarberShop-HU-Magyar-Budapest-VKerlet-Fresha.jpg?class=venue-gallery-mobile&f_width=3840"
                 alt="Profi Hajvagas" title="Profi Hajvagas" class=" primary-card-image my-2 w-75 mx-5">
@@ -44,14 +54,34 @@
         </div>
         <div class="d-block-flex flex-row div-primary container-fluid">
 
-            <p class="secondary-card-text my-2 d-block-flex">Fedezd fel a legújabb trendeket és stílusokat,<br>
+            <p class="secondary-card-text my-2 d-flex">Fedezd fel a legújabb trendeket és stílusokat,<br>
                 amelyeket
                 szakértőink kínálnak.</p>
 
         </div>
     </div>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function() {
+            document.addEventListener('click', function(event) {
+                const anchor = event.target.closest('a');
+                if (!anchor) return;
+                const href = anchor.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+                if (anchor.target && anchor.target !== '_self') return;
+                const url = new URL(href, location.href);
+                if (url.origin !== location.origin) return;
+                event.preventDefault();
+                const navigate = () => { location.href = url.href; };
+                if (document.startViewTransition) {
+                    document.startViewTransition(navigate);
+                } else {
+                    navigate();
+                }
+            });
+        })();
+    </script>
 </body>
 
 </html>
