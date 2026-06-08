@@ -1,5 +1,21 @@
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-size: clamp(4rem, 10vw, 20rem);
+    display: inline-block;
+    padding: 40px 40px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 4rem);
+    display: inline-block;
+    padding: 20px 20px;
+    font-weight: 500;
+    text-align: center;
 }
 
 body {
@@ -12,13 +28,13 @@ body {
 .menubar-top {
     font-family: 'DM Sans', sans-serif !important;
     font-weight: 500;
-    font-size: 1.1rem; 
-    letter-spacing: 0.5px; 
-    cursor: pointer; 
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    cursor: pointer;
     color: #373737;
 }
 
-.menubar-top a  {
+.menubar-top a {
     border-bottom: 2px solid transparent;
     transition: border-color 0.25s ease-in-out, color 0.25s ease-in-out;
     padding-bottom: 4px;
@@ -27,14 +43,14 @@ body {
     padding: 8px 20px;
 }
 
-.menubar-top a:hover  {
+.menubar-top a:hover {
     border-color: #f2e6ce;
     color: #f2e6ce;
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     transition: box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.reserveButtonPrimary  {
+.reserveButtonPrimary {
     border-color: #f2e6ce;
     color: #f2e6ce;
     border-bottom: 2px solid transparent;
@@ -53,7 +69,7 @@ body {
     font-variant: small-caps;
     font-weight: 500;
     font-size: clamp(4rem, 10vw, 20rem);
-    cursor: pointer; 
+    cursor: pointer;
     color: #efe5d2;
     text-shadow: #373737 4px 6px 3px;
     display: inline-block;
@@ -128,13 +144,13 @@ body {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    display: block;
+    display: flex;
     padding: 20px 40px;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     width: fit-content;
     margin: 0 auto;
     border: 2px solid #f2e6ce;
-    max-width: 70%;
+    max-width: 90%;
     margin-left: auto;
 
 }
@@ -148,35 +164,36 @@ a {
 .primary-card-text {
 
     font-family: 'DM Sans', sans-serif !important;
-    color:#efe5d2;
+    color: #efe5d2;
     display: block;
     width: fit-content;
-    font-size: clamp(1rem, 2vw, 3rem);
-    
+    font-size: clamp(0.2rem, 2vw, 3rem);
+
 }
+
 .secondary-card-text {
 
     font-family: 'DM Sans', sans-serif !important;
-    color:#efe5d2;
+    color: #efe5d2;
     display: block;
     width: fit-content;
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(0.2rem, 1.5vw, 2rem);
     margin-left: 1rem;
 }
 
 .div-primary {
     display: flex;
-    width:100%;
+    width: fit-content;
     margin-top: 2rem;
 
 }
 
-.reserveButtonPrimary  {
+.reserveButtonPrimary {
     font-family: 'DM Sans', sans-serif !important;
     font-weight: 900;
-    font-size: 1.6rem; 
-    letter-spacing: 1px; 
-    cursor: pointer; 
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    cursor: pointer;
     color: #f2e6ce;
     max-height: none;
     color: #373737;
@@ -202,16 +219,23 @@ a {
 }
 
 @view-transition {
+
     navigation: auto;
+    
 }
+
 
 p {
-    text-spacing: 1px;
     letter-spacing: 1px;
+    color: #efe5d2;
+    font-family: 'DM Sans', sans-serif !important;
 }
 
-.image-round
-{
+.image-round {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.glow {
+    text-shadow: 0 0 2px #f2e6ce, 0 0 5px #f2e6ce, 0 0 10px #f2e6ce;
 }

@@ -22,26 +22,45 @@
 
 <body>
     <div class="flex-row d-inline-flex menubar-top col-12 gap-5 py-5 mx-4">
-        <div class="dropdown">
-            <button class="btn btn-dark dropdown-toggle" type="button" id="mainDropdown" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Menu">
+        <div class="dropdown d-md-none d-xs-flex">
+            <button class="btn btn-dark dropdown-toggle" type="button" id="mainDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false" aria-label="Menu">
                 <span class="dropdown-icon" aria-hidden="true">
                     <span></span>
                     <span></span>
                     <span></span>
                 </span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="mainDropdown">
+            <ul class="dropdown-menu menubar-top d-md-none d-xs-flex" aria-labelledby="mainDropdown">
                 <li><a class="dropdown-item" href="main.html">Főoldal</a></li>
                 <li><a class="dropdown-item" href="reserve.html">Foglalás</a></li>
                 <li><a class="dropdown-item" href="about.html">Rólunk</a></li>
             </ul>
         </div>
     </div>
-     
+
+    <div class="d-md-flex d-xs-none d-sm-none flex-row menubar-top col-12 justify-content-center my-3 gap-5">
+        <a href="main.html">Főoldal</a>
+        <a href="reserve.html">Foglalás</a>
+        <a href="about.html">Foglalás</a>
+    </div>
+    <div class="container-fluid d-block w-50 mx-auto glass-header" style="font-weight: 800;">
+        <h1 class="primary-card-text d-block-flex">BarbárShop - Ahol a tradíció találkozik a prémium stílussal.</h1>
+        <h1 class="secondary-card-text">1967 óta a tökéletes megjelenés szolgálatában.</h2>
+            <p class="secondary-card-text">Nem ma kezdtük. Több mint fél évszázada, 1967-ben nyitottuk meg kapuinkat, és
+                azóta generációk stílusát határoztuk meg. A BarberShop nem csupán egy fodrászat – ez egy olyan férfias
+                menedék, ahol a klasszikus borbély tradíciók és a legújabb, modern hajvágási trendek találkoznak.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkC-cRBpbw9CUAnr2yyEzS3ODmxQulqg4N1A&s"
+                alt="Profi Barber" title="Profi Barber" class="w-100 image-round my-5">
+    </div>
+
+    <br>
+
+    <p class="text-center">Torma Endre x Tóth-Téti Zekő <br> Copyright BarbárShop Kft. 2026 Minden Jog Felülírva</p>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        (function() {
-            document.addEventListener('click', function(event) {
+        (function () {
+            document.addEventListener('click', function (event) {
                 const anchor = event.target.closest('a');
                 if (!anchor) return;
                 const href = anchor.getAttribute('href');
@@ -60,4 +79,5 @@
         })();
     </script>
 </body>
+
 </html>
